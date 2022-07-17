@@ -13,11 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+// ruta inicial index
 Route::get('/', function () {
     return view('welcome');
 });
 
+// ruta de contacto
+Route::get('/escribeme', function () {
+    return view('contacto');
+})->name("contacto");// se agrega nombre a la ruta para que asi se imprima desde la pagina html
+
+// ruta de prueba de envios de variables
 Route::get('/custom', function () {
     $msj = "Este es un mensaje desde la ruta prrou"; // este es es un mensaje para despues sea enviado
 
