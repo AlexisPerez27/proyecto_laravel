@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/custom', function () {
+    $msj = "Este es un mensaje desde la ruta prrou"; // este es es un mensaje para despues sea enviado
+
+    $data = ['msj'=>$msj , 'edad' => 23]; // este es un arreglo que se coloca para enviarlo a la vista desde el return
+
+    return view('custom', $data); // lo que esta dentro del array es para enviar el mensaje en una variable para despues imprimirlo en la vista, 1 o mas variales
+});
+
