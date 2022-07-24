@@ -9,8 +9,13 @@
 <body>
     <h1>Bienvenido</h1>
 
-    <a href="./contacto">Contacto</a>
+    <a href="./escribeme">Contacto</a>
     <br>
     <a href="{{route('contacto')}}">Contacto con nombre en ruta</a>
+
+    {{-- para imprimir nuestra variable obtenida --}}
+    <p>{{$user}}</p>
+    {{-- para imprimir solo un campo de nuestra variable obtenida  --}}
+    <p>{{$user -> name}}</p>
 </body>
 </html>
